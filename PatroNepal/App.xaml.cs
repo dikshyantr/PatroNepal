@@ -44,7 +44,7 @@ namespace PatroNepal{
             if (rootFrame == null){
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
-                NepaliPatro.Common.SuspensionManager.RegisterFrame(rootFrame, "");
+                PatroNepal.Common.SuspensionManager.RegisterFrame(rootFrame, "");
 
                 if (args.PreviousExecutionState == ApplicationExecutionState.Terminated){
                     //TODO: Load state from previously suspended application
