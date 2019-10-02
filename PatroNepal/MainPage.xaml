@@ -1,0 +1,68 @@
+<Page
+    x:Name="pageRoot"
+    x:Class="PatroNepal.MainPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PatroNepal"
+    xmlns:common="using:PatroNepal.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton Label="सूचनाहरू" Icon="Bullets" Click="AppBarButton_Click"/>
+            <AppBarButton Label="चिन्हहरू" Icon="Bullets" Click="AppBarButton1_Click"/>
+            <!--AppBarButton Label="Help" Icon="Help"/-->
+        </CommandBar>
+    </Page.TopAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Viewbox>
+            <Grid>
+                <Grid x:Name="TheGrid" HorizontalAlignment="Center" Height="500" Margin="0,210,0,0" VerticalAlignment="Top" Width="1198" Background="#FFD1D1D1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <!--RowDefinition /-->
+                        <!--RowDefinition /-->
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+
+
+                </Grid>
+                <Grid x:Name="DayGrid" HorizontalAlignment="Center" Height="72" Margin="0,122,0,0" VerticalAlignment="Top" Width="1198" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+<ComboBox x:Name="MonthsList" HorizontalAlignment="Left" Height="48" Margin="80,40,0,0" VerticalAlignment="Top" Width="145" SelectionChanged="MonthsList_SelectionChanged" FontWeight="Bold"/>
+<ComboBox x:Name="YearsList" HorizontalAlignment="Left" Height="48" Margin="1140,40,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="YearsList_SelectionChanged" FontWeight="Bold"/>
+<Button x:Name="LeftNavig" Content="&lt;" HorizontalAlignment="Right" Height="124" Margin="-7,364,1276,0" VerticalAlignment="Top" RenderTransformOrigin="0.145,0.447" FontFamily="KaiTi" FontWeight="Bold" FontSize="48" BorderBrush="{x:Null}" Tapped="LeftNavig_Tapped" Width="85"/>
+<Button x:Name="RtNavig" Content="&gt;" HorizontalAlignment="Left" Height="124" Margin="1277,364,-7,0" VerticalAlignment="Top" RenderTransformOrigin="0.145,0.447" FontFamily="KaiTi" FontWeight="Bold" FontSize="48" BorderBrush="{x:Null}" Tapped="RtNavig_Tapped" Width="84"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Page>
